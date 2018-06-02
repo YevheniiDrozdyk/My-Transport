@@ -1,12 +1,14 @@
 package com.khadi.mytransport.service;
 
+import com.khadi.mytransport.dto.UserDto;
+import com.khadi.mytransport.exception.PhoneNumberExistException;
 import com.khadi.mytransport.model.User;
 
 public interface UserService {
 
     boolean login(String phoneNumber, String password);
 
-    void register(User user);
+    User register(UserDto user) throws PhoneNumberExistException;
 
     boolean isExist(String phoneNumber);
 
