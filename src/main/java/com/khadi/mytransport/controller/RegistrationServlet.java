@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -33,8 +34,8 @@ public class RegistrationServlet {
     }
 
     @PostMapping("/new")
-    public ModelAndView register(@ModelAttribute @Valid UserDto userDto, BindingResult result,
-                                 WebRequest request, Errors errors) {
+    public ModelAndView register(@ModelAttribute @Valid UserDto userDto, @RequestParam(name = "g-recaptcha-response") String captcha,
+                                 BindingResult result, WebRequest request, Errors errors) {
         User user = new User();
         if (!result.hasErrors()) {
             user = userService.register(userDto);

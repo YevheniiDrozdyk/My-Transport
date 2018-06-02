@@ -4,6 +4,7 @@ import com.khadi.mytransport.validation.PasswordMatches;
 import com.khadi.mytransport.validation.ValidEmail;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.web.bind.annotation.RequestPart;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;

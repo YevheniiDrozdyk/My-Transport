@@ -388,11 +388,11 @@ ul.topic_grid{
 	height:143px;
 }
 /*** For Change Animation Effects ****/
-.accordation_menu input:checked ~ .content p{       
+.accordation_menu input:checked ~ .content p{
 	-webkit-animation: zoomIn .7s 1;
 	animation: zoomIn .7s 1;
 }
-.accordation_menu input:checked ~ .content h6{       
+.accordation_menu input:checked ~ .content h6{
 	-webkit-animation: fadeIn 2s 1;
 	animation: fadeIn 2s 1;
 }
@@ -403,7 +403,7 @@ ul.topic_grid{
 	color: #01C675;
 	padding: 15px 0 15px 15px;
 	font-size: 1.2em;
-	font-weight: 600;           
+	font-weight: 600;
 }
 .accordation_menu label{
 	background: #fff;
@@ -411,7 +411,7 @@ ul.topic_grid{
 	font-size: 17px;
 	font-weight: 300;
 }
-.accordation_menu label:hover{                    
+.accordation_menu label:hover{
 	color:#000;
 }
 .accordation_menu label:hover .icon-plus-sign:before {
@@ -423,7 +423,7 @@ ul.topic_grid{
 	top:23px;
 }
 .accordation_menu input:checked + label,
-.accordation_menu input:checked + label:hover{ 
+.accordation_menu input:checked + label:hover{
 	border: 1px solid #999;
 	color: #999;
 }
@@ -607,7 +607,7 @@ text-decoration: none;
 color: #ffd400;
 font-size:1.1em;
 border: none;
-text-transform:uppercase; 
+text-transform:uppercase;
 font-weight: 600;
 }
 /*-- flexisel --*/
@@ -724,9 +724,9 @@ text-align: center;
 	display: inline-block;
 	color: #FFF;
 	font-size: 1.3em;
-	font-weight:600;	
+	font-weight:600;
 	text-align:center;
-	text-transform:uppercase;	
+	text-transform:uppercase;
 	-webkit-appearance:none;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
@@ -766,7 +766,7 @@ text-align: center;
 }
 .og-grid li {
 	width: 23%;
-}	
+}
 .portfolio-wrapper-1 {
 	overflow: hidden;
 	position: relative !important;
@@ -1138,7 +1138,7 @@ margin: 7.8em auto 0 1em;
 }
 /*----*/
 .blog-content-right{
-	
+
 }
 .b-search{
 	position: relative;
@@ -1272,7 +1272,7 @@ nav a:focus {
 
 .cl-effect-20 a:hover span::before,
 .cl-effect-20 a:focus span::before {
-	-webkit-transform: rotateX(10deg);	
+	-webkit-transform: rotateX(10deg);
 	-moz-transform: rotateX(10deg);
 	transform: rotateX(10deg);
 }
@@ -1622,7 +1622,7 @@ div.span4 {
 }
 .contact form textarea{
 	resize:none;
-	height:170px;		
+	height:170px;
 }
 .submit{
 	margin: 2% 0;
@@ -1715,7 +1715,7 @@ padding-top: 1em;
 .footer-grid.bottom-nav ul li,.footer-grid.category ul li,.footer-grid.brands li,.footer-grid.contact ul li{
 	display:block;
 	list-style: none;
-	
+
 }
 .footer-grid.bottom-nav li a:hover {
 	text-decoration: none;
@@ -1830,6 +1830,51 @@ ul.soc_icons2 li {
 	-moz-opacity: 0;
 	filter: alpha(opacity=0);
 }
+div#Registration {
+	padding: 2.6em 0 3em 0;
+}
+.registration_form {
+	display: block;
+	padding: 10px 0;
+}
+.registration_form input[type="text"],.registration_form input[type="email"],.registration_form input[type="tel"],.registration_form input[type="password"],.registration_form input[type="number"],.registration_form input[type="date"]{
+	padding: 8px;
+	display: block;
+	width:100%;
+	outline: none;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.25em;
+	color: #333333;
+	-webkit-appearance: none;
+	background: #FFFFFF;
+	border: 1px solid rgb(231, 231, 231);
+	font-weight: normal;
+	margin: 5px;
+}
+.form--submit input[type="submit"]{
+	font-family: 'Open Sans', sans-serif;
+	background: #ffd400;
+	color: #fff;
+	font-weight: 500;
+	padding: 0.75em 1em;
+	display: inline-block;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	letter-spacing: 0.1em;
+	border:2px solid#ffd400;
+	outline: none;
+	cursor: pointer;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	width:100%;
+	margin-left: 5px;
+}
+
+.form--captcha {
+	margin: 5px;
+}
 
 /*---- responsive-design -----*/
 @media(max-width:1440px){
@@ -1845,7 +1890,7 @@ ul.soc_icons2 li {
 	.logo {
 	margin: 18em 0 0 0;
 	}
-	
+
 }
 @media(max-width:1366px){
 	.sub-header{
@@ -2024,7 +2069,7 @@ ul.soc_icons2 li {
 	.logo h1 a {
 	font-weight: 700;
 	font-size: 0.8em;
-	margin:0;	
+	margin:0;
 	}
 	.header-top {
 	padding: 3px 0px 6px 0px;
@@ -2202,7 +2247,7 @@ ul.soc_icons2 li {
 	.logo h1 a {
 	font-weight: 700;
 	font-size: 0.8em;
-	margin:0;	
+	margin:0;
 	}
 	.header-top {
 	padding: 3px 0px 6px 0px;
@@ -2313,7 +2358,7 @@ ul.soc_icons2 li {
 	.logo h1 a {
 	font-weight: 700;
 	font-size: 0.8em;
-	margin:0;	
+	margin:0;
 	}
 	.header-top {
 	padding: 3px 0px 6px 0px;

@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="head" th:remove="tag"></head>
+<body>
+<div th:include="header" th:remove="tag"></div>
 <div class="Error-found">
     <div class="error-page">
         <h3>4<span>0</span>4</h3>
@@ -9,3 +14,6 @@
     <p>Nothing found</p>
     <a class="back" href="index.html">Back To Home</a>
 </div>
+<div th:include="footer" th:remove="tag"></div>
+</body>
+</html>

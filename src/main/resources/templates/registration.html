@@ -1,0 +1,29 @@
+<div xmlns:th="http://www.thymeleaf.org">
+    <div id="Registration">
+        <div class="container">
+            <div class="wecome-main">
+                <div class=" col-md-6 wecome-text">
+                    <h1>Зарегистрироваться</h1>
+                    <div class="registration_form">
+                        <form method="post" th:action="@{/registration/new}">
+                            <input name="phoneNumber" type="number" placeholder="Номер телефона">
+                            <input name="password" type="password" placeholder="Пароль">
+                            <input name="matchingPassword" type="password" placeholder="Подтвердить пароль">
+                            <input name="firstName" type="text" placeholder="Имя">
+                            <input name="lastName" type="text" placeholder="Фамилия">
+                            <input name="email" type="email" placeholder="Email">
+                            <input name="birthDay" placeholder="Дата рождения" class="textbox-n" type="text"
+                                   onfocus="(this.type='date')" id="date">
+                            <input name="address" type="text" placeholder="Адресс">
+                            <div class="form--captcha g-recaptcha" data-sitekey="6Ley6VwUAAAAAG4Q2obTCCTI7_pH2dnWSf8v3UJR"></div>
+                            <div class="clearfix"></div>
+                            <div class="form--submit">
+                                <input type="submit" value="Подтвердить"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
