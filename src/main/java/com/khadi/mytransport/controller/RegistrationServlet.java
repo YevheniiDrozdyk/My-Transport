@@ -2,6 +2,7 @@ package com.khadi.mytransport.controller;
 
 import com.khadi.mytransport.dto.UserDto;
 import com.khadi.mytransport.model.User;
+import com.khadi.mytransport.service.CaptchaService;
 import com.khadi.mytransport.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,8 @@ import javax.validation.Valid;
 public class RegistrationServlet {
 
     @Autowired
+    private CaptchaService captchaService;
+    @Autowired
     private UserService userService;
 
     @GetMapping("/form")
@@ -37,14 +40,14 @@ public class RegistrationServlet {
     public ModelAndView register(@ModelAttribute @Valid UserDto userDto, @RequestParam(name = "g-recaptcha-response") String captcha,
                                  BindingResult result, WebRequest request, Errors errors) {
         User user = new User();
-        if (!result.hasErrors()) {
+        if (!result.hasErrors() && captchaService.isValid(captcha)) {
             user = userService.register(userDto);
         }
         if (user == null) {
             result.rejectValue("phoneNumber", "message.regError");
         }
         ModelAndView modelAndView = new ModelAndView("page-template", "userDto", userDto);
-        if (result.hasErrors()) {
+        if (result.hasErrors() && !captchaService.isValid(captcha)) {
             modelAndView.addObject("currentPage", "registration");
         } else {
             modelAndView.addObject("currentPage", "index");
