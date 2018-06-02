@@ -1,0 +1,36 @@
+<div xmlns:th="http://www.thymeleaf.org" class="header-section">
+    <div class="header-top"></div>
+    <div class="container">
+        <!--logo-->
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+        </div>
+        <!--top-nav-->
+        <div class="sub-header">
+            <div class="top-nav">
+                <span class="menu"> </span>
+                <ul>
+                    <li class="active"><a href="index.html">Домой</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="404.html">Войти</a></li>
+                    <li><a href="404.html">Зарегистрироваться</a></li>
+                    <li><a href="mail.html">Связаться с нами</a></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- script-for-menu -->
+        <script>
+            $(document).ready(function () {
+                $("span.menu").click(function () {
+                    $(".top-nav ul").slideToggle(200);
+                });
+            });
+        </script>
+        <div class="clearfix"></div>
+        <!--//End-slider-script-->
+    </div>
+</div>
