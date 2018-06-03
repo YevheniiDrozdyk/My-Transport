@@ -1,0 +1,21 @@
+<div xmlns:th="http://www.thymeleaf.org">
+    <div id="Registration">
+        <div class="container">
+            <div class="wecome-main">
+                <div class=" col-md-6 wecome-text">
+                    <h1>Войти в систему</h1>
+                    <div class="registration_form">
+                        <form method="post" th:action="@{/login.html}">
+                            <input name="phoneNumber" type="number" placeholder="Номер телефона">
+                            <input name="password" type="password" placeholder="Пароль">
+                            <div class="clearfix"></div>
+                            <div class="form--submit">
+                                <input type="submit" value="Войти"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

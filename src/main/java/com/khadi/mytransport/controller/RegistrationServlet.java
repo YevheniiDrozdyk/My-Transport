@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping("/registration")
+@RequestMapping({"/registration", "/registration.html"})
 public class RegistrationServlet {
 
     @Autowired
@@ -49,7 +49,7 @@ public class RegistrationServlet {
         }
         if (user == null) {
             result.rejectValue("phoneNumber", "message.regError");
-            result.addError(new ObjectError("registration.message","There is an account with such phone number: " + userDto.getPhoneNumber()));
+            result.addError(new ObjectError("registration.message", "There is an account with such phone number: " + userDto.getPhoneNumber()));
         }
         if (result.hasErrors() || StringUtils.isNotEmpty(captchaErrors)) {
             return new ModelAndView("redirect:/registration")

@@ -2,7 +2,6 @@ package com.khadi.mytransport.service.impl;
 
 import com.khadi.mytransport.converter.UserConverter;
 import com.khadi.mytransport.dto.UserDto;
-import com.khadi.mytransport.exception.PhoneNumberExistException;
 import com.khadi.mytransport.model.User;
 import com.khadi.mytransport.repository.UserRepository;
 import com.khadi.mytransport.service.UserService;
