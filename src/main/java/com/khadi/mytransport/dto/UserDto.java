@@ -4,11 +4,9 @@ import com.khadi.mytransport.validation.PasswordMatches;
 import com.khadi.mytransport.validation.ValidEmail;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.web.bind.annotation.RequestPart;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -35,7 +33,7 @@ public class UserDto {
     private String email;
     @NotNull
     @NotEmpty
-    private LocalDate birthDay;
+    private String birthDay;
     @NotNull
     @NotEmpty
     private String address;

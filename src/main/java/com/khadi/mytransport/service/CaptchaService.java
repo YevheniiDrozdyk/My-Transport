@@ -2,5 +2,5 @@ package com.khadi.mytransport.service;
 
 public interface CaptchaService {
 
-    boolean isValid(String captcha);
+    String verify(String remoteIp, String captchaResponse);
 }

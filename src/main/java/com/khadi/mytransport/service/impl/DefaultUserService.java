@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class DefaultUserService implements UserService {
 
     @Autowired
     private UserRepository userRepository;
