@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 
 @Service
+@Transactional
 public class DefaultUserService implements UserService {
 
     @Autowired
@@ -21,11 +22,10 @@ public class DefaultUserService implements UserService {
 
     @Override
     public boolean login(String phoneNumber, String password) {
-        return false;
+        return get(phoneNumber).getPassword().equals(password);
     }
 
     @Override
-    @Transactional
     public User register(UserDto user) {
         if (isExist(user.getPhoneNumber())) {
             return null;
