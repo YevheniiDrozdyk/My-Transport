@@ -26,16 +26,16 @@ public class DefaultUserService implements UserService {
 
     @Override
     @Transactional
-    public User register(UserDto user) throws PhoneNumberExistException {
+    public User register(UserDto user) {
         if (isExist(user.getPhoneNumber())) {
-            throw new PhoneNumberExistException("There is an account with such phone number: " + user.getPhoneNumber());
+            return null;
         }
         return userRepository.save(userConverter.convert(user));
     }
 
     @Override
     public boolean isExist(String phoneNumber) {
-        return false;
+        return userRepository.findByPhoneNumber(phoneNumber).isPresent();
     }
 
     @Override

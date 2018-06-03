@@ -8,7 +8,7 @@ public interface UserService {
 
     boolean login(String phoneNumber, String password);
 
-    User register(UserDto user) throws PhoneNumberExistException;
+    User register(UserDto user);
 
     boolean isExist(String phoneNumber);
 
