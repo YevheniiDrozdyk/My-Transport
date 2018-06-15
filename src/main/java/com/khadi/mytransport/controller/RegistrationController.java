@@ -22,7 +22,7 @@ import javax.validation.Valid;
 
 @Controller
 @RequestMapping({"/registration", "/registration.html"})
-public class RegistrationServlet {
+public class RegistrationController {
 
     @Autowired
     private CaptchaService captchaService;
