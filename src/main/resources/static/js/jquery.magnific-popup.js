@@ -937,7 +937,7 @@ $.fn.magnificPopup = function(options) {
 		options = $.extend(true, {}, options);
 		
 		/*
-		 * As Zepto doesn't support .data() method for objects 
+		 * As Zepto doesn't support .data() method for objects
 		 * and it works only in normal browsers
 		 * we assign "options" object directly to the DOM element. FTW!
 		 */

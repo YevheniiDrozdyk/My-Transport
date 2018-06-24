@@ -1876,6 +1876,13 @@ div#Registration {
 	margin: 5px;
 }
 
+.route-info {
+	width: 98.5%;
+	margin-top: 15px;
+	margin-left: 15px;
+	border: 1px solid darkgrey;
+}
+
 /*---- responsive-design -----*/
 @media(max-width:1440px){
 	.sub-header.two{

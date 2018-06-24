@@ -1,0 +1,32 @@
+<div xmlns:th="http://www.thymeleaf.org">
+    <table class="table route-info" th:object="${routes}">
+        <thead>
+            <tr>
+                <th scope="col">Номер п/п</th>
+                <th scope="col">Номер маршрута</th>
+                <th scope="col">Регулярность движения</th>
+                <th scope="col">Начало работы</th>
+                <th scope="col">Конец работы</th>
+                <th scope="col">Остановки</th>
+                <th scope="col">Цена проезда</th>
+                <th scope="col">Наличие безконтактной оплаты</th>
+                <th scope="col">Контактные данные</th>
+                <th scope="col">Протяженность маршрута</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="route :${routes}">
+                <td th:text="${route.getId()}"></td>
+                <td th:text="${route.getNumber()}"></td>
+                <td th:text="${'Каждые ' + route.getRouteRegularity() + ' минут'}"></td>
+                <td th:text="${route.getStartTime()}"></td>
+                <td th:text="${route.getEndTime()}"></td>
+                <td><a href="#">Подробнее</a></td>
+                <td th:text="${route.getPrice() + ' ГРН'}"></td>
+                <td th:text="${route.isContactlessPayment() ? 'Есть' : 'Отсутсвует'}"></td>
+                <td th:text="${route.getContactInfo()}"></td>
+                <td th:text="${route.getDistance() + ' КМ'}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
