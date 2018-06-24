@@ -1,0 +1,10 @@
+<h2 class="stops-headline">СПИСОК ОСТАНОВОК ДЛЯ МАРШРУТА №289е:</h2>
+<div class="list-group stops-list" xmlns:th="http://www.thymeleaf.org" th:object="${stops}">
+    <a th:each="stop :${stops}" href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1" th:text="${stop.getPrincipalName()}"></h5>
+            <small th:text="${'Долгота: ' + stop.getLongitude()}"></small>
+            <small th:text="${'Широта: ' + stop.getLatitude()}"></small>
+        </div>
+    </a>
+</div>

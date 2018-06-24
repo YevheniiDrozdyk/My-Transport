@@ -1883,6 +1883,18 @@ div#Registration {
 	border: 1px solid darkgrey;
 }
 
+.stops-list {
+	width: 25%;
+	margin: 25px;
+	margin-left: 700px;
+}
+
+.stops-headline {
+	font-size: 30px;
+	margin-left: 590px;
+	color: #ffd400;
+}
+
 /*---- responsive-design -----*/
 @media(max-width:1440px){
 	.sub-header.two{

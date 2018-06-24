@@ -21,7 +21,7 @@
                 <td th:text="${'Каждые ' + route.getRouteRegularity() + ' минут'}"></td>
                 <td th:text="${route.getStartTime()}"></td>
                 <td th:text="${route.getEndTime()}"></td>
-                <td><a href="#">Подробнее</a></td>
+                <td><a th:href="@{/stop-info(routeId=1)}">Подробнее</a></td>
                 <td th:text="${route.getPrice() + ' ГРН'}"></td>
                 <td th:text="${route.isContactlessPayment() ? 'Есть' : 'Отсутсвует'}"></td>
                 <td th:text="${route.getContactInfo()}"></td>
